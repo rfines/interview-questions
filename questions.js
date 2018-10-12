@@ -17,7 +17,6 @@ function processStringsInLoops (A, B) {
 	for (var i=0;i<A.length;i++) {
 		var found = false
 		for (var j = 0; j< B.length;j++) {
-		console.log(`comparing ${A[i]} and ${B[j]}`)
 			if(A[i] === B[j]){
 				found = true
 			}
@@ -40,16 +39,13 @@ function processStringsInLoops (A, B) {
 function processStringsHashMap (A, B) {
 	var hashmap = {}
 	for (var i = 0; i< A.length;i++) {
-		console.log(A[i])
 		if (hashmap[A[i]]) {
 			hashmap[A[i]]++
 		} else {
 			hashmap[A[i]] = 1
 		}
 	}
-	console.log(hashmap)
 	for(var i = 0; i< B.length; i++)  {
-		console.log(B[i])
 		if(hashmap[B[i]]) {
 			delete hashmap[B[i]]
 		}
